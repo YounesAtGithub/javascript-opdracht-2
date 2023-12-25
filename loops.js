@@ -10,10 +10,9 @@
 // Tip: je kunt de .repeat() methode gebruiken om een karakter een n aantal keer te herhalen...
 // Dit heb je nog niet geleerd, maar bekijk hiervoor dit MDN-artikel eens: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/repeat
 // ==========================================
-
-
-
-
+for (let i = 1; i < 6; i++) {
+console.log('*'.repeat(i));
+}
 
 // ==========================================
 // Opdracht 2. Maak een for-loop die 4 keer het woord "loop..." logt, en bij de laatste (vijfde) loop het woord "klaar!"
@@ -24,10 +23,12 @@
 // loop...
 // klaar!
 // ==========================================
-
-
-
-
+for (let i = 0; i < 5; i++)
+if (i < 4) {
+console.log("loop...");
+} else {
+console.log("Klaar!");
+}
 
 // ==========================================
 // Opdracht 3: maak een for-loop die van 0 tot 9 loopt en de getallen 0 tot 9 logt.
@@ -43,9 +44,21 @@
 // >> 7
 // >> 8
 // >> 9
+
+
 // ==========================================
-
-
+for (let i = 0; i < 10; i++)
+    if ((i >=0) && (i <= 2)){
+        // het eerste blok wordt uitgevoerd als de conditie true is
+        console.log(i);
+    } else if ((i >=3) && (i <= 5)){
+        // het tweede blok wordt uitgevoerd als de conditie false is
+        console.log('> ' + i);
+    }
+    else if ((i >=6) && (i <= 9)){
+        // het tweede blok wordt uitgevoerd als de conditie false is
+        console.log('>> ' + i);
+    }
 
 
 
@@ -86,6 +99,28 @@
 // FizzBuzz
 // etc.
 // ==========================================
+for (let i = 0; i < 100; i++) {
 
+        if (Number.isInteger(i / 5) && Number.isInteger(i / 3))
+         {
+                console.log('fizzbuzz')
+        }
+        else if (Number.isInteger(i / 5)) {
+                console.log('buzz')
+        }
+        else if   (Number.isInteger(i / 3)) {
+                console.log('fizz')
+        }
+        else {console.log(i)
+        }
+}
 
+    // } else if ((i >=3) && (i <= 5)){
+    //     // het tweede blok wordt uitgevoerd als de conditie false is
+    //     console.log('> ' + i);
+    // }
+    // else if ((i >=6) && (i <= 9)){
+    //     // het tweede blok wordt uitgevoerd als de conditie false is
+    //     console.log('>> ' + i);
+    // }
 

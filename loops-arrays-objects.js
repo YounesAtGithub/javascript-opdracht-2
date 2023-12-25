@@ -14,13 +14,14 @@ const scores = [
 // 77
 // 92
 // 66
-// ==========================================
+// ========================================== BEGIN
+/*for (let i = 0; i < scores.length; i++) {
+    console.log(scores[i].score)
+
+}*/
 
 
-
-
-
-// ==========================================
+// ========================================== EIND
 // Opdracht 1b
 // Breid je script uit door voor iedere student de score om te rekenen naar een letter en dit in de terminal te printen
 // < 60 = F, < 70 = D, <80 = C, <90 B, <100 = A
@@ -31,9 +32,23 @@ const scores = [
 // A
 // D
 // ==========================================
+for (let i = 0; i < scores.length; i++) {
+    if (scores[i].score < 60) {
+        console.log('F')
+    } else if ((scores[i].score > 60) && (scores[i].score <= 70)) {
+        console.log('D')
+    }
+    else if ((scores[i].score > 70) && (scores[i].score <= 80)) {
+        console.log('C')
+    }
+    else if ((scores[i].score > 80) && (scores[i].score <= 90)) {
+        console.log('B')
+    }
+    else if ((scores[i].score > 90) && (scores[i].score <= 100)) {
+        console.log('A')
+    }
 
-
-
+}
 
 
 // ==========================================
@@ -48,9 +63,6 @@ const scores = [
 //  { name: 'Rianne', score: 66, grade: 'D' }
 //  ];
 // ==========================================
-
-
-
 
 
 // ==========================================
@@ -74,19 +86,20 @@ const NOVIEmployees = [
 //   { firstName: 'Mark', lastName: 'Rensen', email: 'Mark.Rensen@novi.nl' },
 //  ];
 // ==========================================
+for (let i = 0; i < NOVIEmployees.length; i++) {
+    NOVIEmployees[i].email = NOVIEmployees[i].firstName + '@' + NOVIEmployees[i].lastName + '.nl'
+    console.log(NOVIEmployees)
 
-
-
+}
 
 
 
 // Opdracht 2-BONUS
 // Lukt het je om ervoor te zorgen dat alle e-mailadressen in lowercase letters komen te staan? Dit heb je nog niet geleerd, maar google is your best friend...
 // ==========================================
-
-
-
-
+for (let i = 0; i < NOVIEmployees.length; i++) {
+    console.log(NOVIEmployees[i].email.toLowerCase())
+}
 // ==========================================
 // Opdracht 3
 // Schrijf een script die de property "neighborhood" (de buurt) invult op basis van de postcode van onze studenten.
@@ -130,6 +143,40 @@ const students = [
 //     { name: 'Karima', city: 'Utrecht', zipCode: '3531', neighborhood: 'Vogelenbuurt' }
 // ]
 // ==========================================
+for (let i = 0; i < students.length; i++) {
 
 
+switch (students[i].zipCode) {
+    case '3513':
+        students[i].neighborhood = 'Pijlsweerd'
+        break;
+    case '3514':
+        students[i].neighborhood = 'Vogelenbuurt'
+        break;
+    case '3512':
+        students[i].neighborhood = 'Binnenstad'
+        break;
+    case '3531':
+        students[i].neighborhood = 'Lombok'
+        break;
+    case '3572':
+        students[i].neighborhood = 'Wittevrouwen'
+        break;
+    case '3581':
+        students[i].neighborhood = 'Oudwijk'
+        break;
+    case '3583':
+        students[i].neighborhood = 'Schildersbuurt'
+        break;
 
+}
+}
+console.log(students)
+
+// 	3513 = Pijlsweerd
+//  3514 = Vogelenbuurt
+//  3512 = Binnenstad
+//  3531 = Lombok
+//  3572 = Wittevrouwen
+//  3581 = Oudwijk
+//  3583 = Schildersbuurt
